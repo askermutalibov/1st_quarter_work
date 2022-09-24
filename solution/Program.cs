@@ -8,6 +8,8 @@
 [“Russia”, “Denmark”, “Kazan”] → []
 */
 
+/*      неверное решение
+
 string[] originArray = { "software testing is subdivided by", "compatibility testing", "verification", "security testing", "ui/ux testing", "automated testing", "performance testing" };
 string[] editedArray = new string[4];
 
@@ -33,3 +35,31 @@ void CreateNewStringArray(string[] filledArray, string[] emptyArray)
 }
 
 CreateNewStringArray(originArray, editedArray);
+
+*/
+
+string[] array = new string[11];
+
+void CreateNewShortStringArray(string[]baseArray)
+{
+    baseArray[0] = "abstract";
+    baseArray[1] = "as";
+    baseArray[2] = "base";
+    baseArray[3] = "bool";
+    baseArray[4] = "do";
+    baseArray[5] = "else";
+    baseArray[6] = "for";
+    baseArray[7] = "goto";
+    baseArray[8] = "if";
+    baseArray[9] = "in";
+    baseArray[10] = "long";
+    Console.Write($"\nthis array looks like: [");
+    for (int i = 0; i < 11; i++)
+    {
+        if (baseArray[i].Length < 3) Console.Write($"{baseArray[i], 3}");
+    }
+    Console.Write(" ]");
+    Console.WriteLine($"\n");
+}
+
+CreateNewShortStringArray(array);
